@@ -4,6 +4,9 @@ import Select from 'react-select';
 import { doApiGet } from './api';
 
 const App = () => {
+  
+  // first task //
+
   const timezonesUrl = 'v2.1/list-time-zone?key=XWSLLPX5RMIZ&format=json&zone=Europe/*';
   const timePrefixUrl = 'v2/get-time-zone?key=XWSLLPX5RMIZ&format=json&by=zone&zone=';
   const timeInterval = 5000;
@@ -47,6 +50,29 @@ const App = () => {
     fetchTimeData(`${timePrefixUrl}${selectedZoneState.value}`);
     console.log(`Timezone selected`, selectedZoneState);
   };
+
+  // end //
+
+  // second task //
+
+  const add = (a, b) => a + b;
+
+  const once = fn => {
+    let executed = false;
+    return (...args) => {
+      if (!executed) {
+        executed = true;
+        return fn.apply(this, args);
+      }
+    }
+  }
+
+  const onceAdd = once(add);
+
+  console.log('onceAdd(1, 2)', onceAdd(1, 2));
+  console.log('onceAdd(2, 2)', onceAdd(2, 2));
+
+  // end //
 
   return (
     <div className="App">
