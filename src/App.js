@@ -1,10 +1,13 @@
 import './App.css';
 import React, { useState, useEffect, useCallback } from 'react';
 import Select from 'react-select';
+import { GrDocumentPdf, GrPrint } from 'react-icons/gr';
+import { MdKeyboardArrowDown } from 'react-icons/md';
+import { RiErrorWarningFill } from 'react-icons/ri';
 import { doApiGet } from './api';
 
 const App = () => {
-  
+
   // first task //
 
   const timezonesUrl = 'v2.1/list-time-zone?key=XWSLLPX5RMIZ&format=json&zone=Europe/*';
@@ -71,8 +74,11 @@ const App = () => {
 
   console.log('onceAdd(1, 2)', onceAdd(1, 2));
   console.log('onceAdd(2, 2)', onceAdd(2, 2));
+  console.log('onceAdd(3, 2)', onceAdd(3, 2));
 
   // end //
+
+  // third task below Select + App.css //
 
   return (
     <div className="App">
@@ -82,6 +88,49 @@ const App = () => {
         onChange={handleChange}
         options={timezonesDataState}
       />
+      <div className="Tab">
+        <div className="Request">
+          <div className="RequestTitle">
+            <h3>Cancel / recall payment, GBP 1,000.00</h3>
+            <div className="RequestSubtitle">1234567890123456 (GB), KUIML Business Company</div>
+          </div>
+          <div className="RequestActions">
+            <div className="RequestAction">
+              <GrDocumentPdf />
+            </div>
+            <div className="RequestAction">
+              <GrPrint />
+            </div>
+            <div className="RequestActionButton Inverse">Reject</div>
+            <div className="RequestActionButton">Authorise</div>
+          </div>
+        </div>
+        <div className="RequestDetails">
+          <div className="RequestDetailsContainer">
+            <div className="RequestDetail">
+              <div className="RequestDetailHeader">
+                Request reference
+              </div>
+              SET29383ABCH
+            </div>
+            <div className="RequestDetail">
+              <div className="RequestDetailHeader">
+                Category
+              </div>
+              Payment
+            </div>
+            <div className="RequestDetail">
+              <div className="RequestDetailHeader">
+                Request status
+              </div>
+              <RiErrorWarningFill /> Pending authorisation
+            </div>
+          </div>
+          <div className="FullDetails">
+            Full details <MdKeyboardArrowDown />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

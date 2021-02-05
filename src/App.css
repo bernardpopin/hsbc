@@ -1,5 +1,128 @@
 .App {
   text-align: center;
   margin: 100px;
-  
+}
+
+.Tab {
+  width: 780px;
+  background-color: #ffffff;
+  margin: 100px auto 0 auto;
+  border-top: 1px solid #252525;
+  border-bottom: 1px solid #252525;
+}
+
+.Request {
+  display: flex;
+  text-align: left;
+}
+
+.RequestTitle {
+  flex: 1;
+  margin: 17px 20px 20px 0;
+  font-weight: 500;
+  color: #252525;
+}
+
+.RequestTitle h3 {
+  margin: 0 0 11px 0;
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.RequestSubtitle {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.RequestActions {
+  display: flex;
+  margin-top: 15px;
+}
+
+.RequestAction:first-child {
+  padding-right: 20px;
+  margin-right: 0;
+  border-right: 1px solid #767676;
+}
+
+.RequestAction {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin: 5px 20px;
+}
+
+.RequestActionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  height: 40px;
+  padding: 0 20px;
+  background-color: #4D6474;
+}
+
+.RequestActionButton:hover {
+  background-color: #3E505C;
+}
+
+.RequestActionButton.Inverse {
+  height: 38px;
+  color: #252525;
+  border: 1px solid #252525;
+  background-color: #FFFFFF;
+  margin-right: 10px;
+}
+
+.RequestActionButton.Inverse:hover {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+
+.RequestDetails {
+  display: flex;
+  text-align: left;
+}
+
+.RequestDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.RequestDetail {
+  border-left: 1px solid #767676;
+  padding: 0 25px 0 10px;
+  margin: 0 0 18px 0;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+}
+
+.RequestDetail svg {
+  fill: #ff9900;
+}
+
+.RequestDetailHeader {
+  color: #767676;
+  font-weight: 400;
+}
+
+.FullDetails {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.FullDetails:hover {
+  text-decoration: underline;
+}
+
+.FullDetails svg {
+  height: 18px;
 }
